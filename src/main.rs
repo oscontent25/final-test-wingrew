@@ -5,7 +5,7 @@
 #[macro_use]
 extern crate log;
 extern crate alloc;
-
+use axstd::println;
 mod ctypes;
 
 mod mm;
@@ -71,6 +71,7 @@ fn main() {
         .split(',')
         .filter(|&x| !x.is_empty());
 
+    println!("START basic-glibc");
     for testcase in testcases {
         let args = testcase
             .split_ascii_whitespace()
@@ -80,4 +81,5 @@ fn main() {
         let exit_code = run_user_app(&args, &[]);
         info!("User task {} exited with code: {:?}", testcase, exit_code);
     }
+    println!("END basic-glibc");
 }
