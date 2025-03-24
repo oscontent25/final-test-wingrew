@@ -16,11 +16,11 @@ oscomp_binary: ax_root defconfig
 oscomp_build:
 	# Build for os competition
 # 判断 ARCH 是否为 riscv64
-	ifeq ($(ARCH),riscv64)
-		RUSTUP_TOOLCHAIN=nightly-2025-01-18 $(MAKE) oscomp_binary AX_TESTCASE=oscomp BUS=mmio FEATURES=lwext4_rs
-	else
-		RUSTUP_TOOLCHAIN=nightly-2025-01-18 $(MAKE) oscomp_binary AX_TESTCASE=oscomp FEATURES=lwext4_rs
-	endif
+ifeq ($(ARCH),riscv64)
+	RUSTUP_TOOLCHAIN=nightly-2025-01-18 $(MAKE) oscomp_binary AX_TESTCASE=oscomp BUS=mmio FEATURES=lwext4_rs
+else
+	RUSTUP_TOOLCHAIN=nightly-2025-01-18 $(MAKE) oscomp_binary AX_TESTCASE=oscomp FEATURES=lwext4_rs
+endif
 
 
 oscomp_test: defconfig
