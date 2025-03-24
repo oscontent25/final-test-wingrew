@@ -121,7 +121,7 @@ jobs:
         with:
           outputfile: loongarch64_output.txt
           scriptPath: .github/classroom/glibc
-      - name: loongarchnusl-test
+      - name: loongarchmusl-test
         uses: oscontent25/os-autograding@master
         id: autogradingloongarchmusl
         with:
