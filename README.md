@@ -5,7 +5,7 @@
 - [点击：创建自己的内核赛道训练repo](https://classroom.github.com/a/gVahDVzg)
 
 本测试涵盖riscv64、loongarch64、aarch64、x86_64四种架构测例，测例内容基本一致。
-
+ 
 总共有四个赛道，测试用例基本一致。
 **注：** 
 1. **基于Github Classroom，具有在线编程，在线自动评测，在线显示排行榜的特征**
