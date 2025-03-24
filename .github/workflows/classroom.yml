@@ -52,16 +52,16 @@ jobs:
           touch aarch64_output.txt
           touch x86_64_output.txt
           make ARCH=riscv64 build || true
-          mv work_riscv64-qemu-virt.bin kernel-rv
+          mv *riscv64-qemu-virt.bin kernel-rv
           make clean
           make ARCH=loongarch64 build || true
-          mv work_riscv64-qemu-virt.elf kernel-la
+          mv *riscv64-qemu-virt.elf kernel-la
           make clean
           make ARCH=aarch64 build || true
-          mv work_aarch64-qemu-virt.bin kernel-ar
+          mv *aarch64-qemu-virt.bin kernel-ar
           make clean
           make ARCH=x86_64 build || true 
-          mv work_x86_64-qemu-q35.elf kernel-x86
+          mv *x86_64-qemu-q35.elf kernel-x86
 
       - name: run tests
         run: |
