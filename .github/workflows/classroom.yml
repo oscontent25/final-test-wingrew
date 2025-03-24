@@ -55,7 +55,7 @@ jobs:
           mv *riscv64-qemu-virt.bin kernel-rv
           make clean
           make ARCH=loongarch64 build || true
-          mv *riscv64-qemu-virt.elf kernel-la
+          mv *loongarch64-qemu-virt.elf kernel-la
           make clean
           make ARCH=aarch64 build || true
           mv *aarch64-qemu-virt.bin kernel-ar
